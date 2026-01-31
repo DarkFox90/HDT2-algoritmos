@@ -5,7 +5,7 @@ public class StackTest {
 
     @Test
     public void testPushandPopandPeek(){
-        Stack<Integer> stack = new ArrayStack<>();
+        Stack<Integer> stack = new VectorStack<>();
         stack.push(10);
         stack.push(20);
         assertEquals(Integer.valueOf(20), stack.peek());
