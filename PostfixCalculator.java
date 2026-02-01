@@ -1,14 +1,14 @@
 /** 
-*PostfixCalculator.java
-*Evalua una expresion en formato postfix y devuelve un reusltado entero
-*Precondicion:
-*La cadena input debe estar en formato postfix valido 
-*los operando deben ser enteros de un solo digito 
-*los elementos deben estar separdados por un espacio 
-*Postcondicion: 
-*Devuelve un entero con el reusltado final de la expresion 
-*Lanza un ArithmeticException si se intenta dividir entre 0
-*Lanza una RuntimeException si la expresion es invalida
+* PostfixCalculator.java
+* Evalua una expresion en formato postfix y devuelve un reusltado entero
+* Precondicion:
+* La cadena input debe estar en formato postfix valido 
+* los operando deben ser enteros de un solo digito 
+* los elementos deben estar separdados por un espacio 
+* Postcondicion: 
+* Devuelve un entero con el reusltado final de la expresion 
+* Lanza un ArithmeticException si se intenta dividir entre 0
+* Lanza una RuntimeException si la expresion es invalida
 * @param input LA expresion postfix leida del archivo datos.txt
 * @return resultado entero de la expresion postfix    
 * @author Mauricio Corado 25218 Carlos Pozuelos 25104

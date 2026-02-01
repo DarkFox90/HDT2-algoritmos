@@ -1,3 +1,9 @@
+/**
+* Clase controladora encargada de la lectura del archivo de datos y 
+* la coordinación entre la vista y la lógica de la calculadora.
+* @author Mauricio Corado 25218 Carlos Pozuelos 25104
+*/
+
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
