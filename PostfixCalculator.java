@@ -23,7 +23,6 @@ public class PostfixCalculator implements Calc{
     }
     @Override
     public int operate(String input) {
-        input.trim().split(" ");
         for (String x : input.split(" ")) {
             if (isNumeric(x)) {
                 stack.push(Integer.parseInt(x));
@@ -40,8 +39,14 @@ public class PostfixCalculator implements Calc{
                     case "*":
                         stack.push(a * b);
                         break;
-                    //falta case "/": debe validar que b no sea 0 
-                    //Tambien falta manejar caracteres no validos
+                    case "/":
+                        if (b == 0) {
+                            throw new ArithmeticException("no se puede dividir por 0");
+                        } else {
+                            stack.push(a / b);
+                        }
+                    default:
+                        throw new IllegalArgumentException("caracter no valido para operarse");
                 }
             }
         }
@@ -49,8 +54,14 @@ public class PostfixCalculator implements Calc{
         return stack.pop();
 
     }
-    //Realizar el metodo isNumeric para validar si una cadena es un numero o no
+    
     public boolean isNumeric(String Num) {
+        try {
+            Integer.parseInt(Num);
+            return true;
+        } catch (NumberFormatException e) {
+            return false;
+        }
     }
 }
 
