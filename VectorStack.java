@@ -9,7 +9,7 @@ import java.util.Vector;
 public class VectorStack<T> implements Stack<T> {
     Vector<T> list = new Vector<>();
 
-    public boolean isEmpety() {
+    public boolean isEmpty() {
         return list.isEmpty();
     }
 
@@ -20,7 +20,7 @@ public class VectorStack<T> implements Stack<T> {
 
     @Override
     public T pop() {
-        if (isEmpety()) {
+        if (isEmpty()) {
             throw new RuntimeException("La pila no tiene nada");
         }
         T top = list.get(list.size()-1);
@@ -31,7 +31,7 @@ public class VectorStack<T> implements Stack<T> {
 
     @Override 
     public T peek() {
-        if (isEmpety()) {
+        if (isEmpty()) {
             throw new RuntimeException("La pila no tiene nada");
         }
         return list.get(list.size()-1);

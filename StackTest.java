@@ -12,7 +12,16 @@ public class StackTest {
         assertEquals(Integer.valueOf(20), stack.pop());
         assertEquals(Integer.valueOf(10), stack.peek());
         assertEquals(Integer.valueOf(10), stack.pop());  
-    };
+    }
+
+    @Test
+    public void SumAndSubstraction() {
+        Stack<Integer> stack2 = new ArrayStack<>();
+        stack2.push(2);
+        stack2.push(4);
+        
+        
+    }
 }
     
 
