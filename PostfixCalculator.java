@@ -24,6 +24,7 @@ public class PostfixCalculator implements Calc{
     @Override
     public int operate(String input) {
         for (String x : input.split(" ")) {
+            if (x.isEmpty()) continue;
             if (isNumeric(x)) {
                 stack.push(Integer.parseInt(x));
             } else {
@@ -45,6 +46,7 @@ public class PostfixCalculator implements Calc{
                         } else {
                             stack.push(a / b);
                         }
+                        break;
                     default:
                         throw new IllegalArgumentException("caracter no valido para operarse");
                 }
