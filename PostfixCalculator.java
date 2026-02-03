@@ -22,7 +22,7 @@ public class PostfixCalculator implements Calc{
         this.stack = stack;
     }
     @Override
-    public int operate(String input) {
+    public double operate(String input) {
         for (String x : input.split(" ")) {
             if (x.isEmpty()) continue;
             if (isNumeric(x)) {
@@ -66,5 +66,3 @@ public class PostfixCalculator implements Calc{
         }
     }
 }
-
-

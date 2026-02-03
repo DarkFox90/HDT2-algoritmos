@@ -24,8 +24,8 @@ public class Controller {
         try(BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
             String line;
             while((line = reader.readLine()) != null) { 
-                int outcome = calculator.operate(line);
-                System.out.println(outcome); 
+                double outcome = calculator.operate(line);
+                 System.out.println(outcome);
             } 
         } catch (FileNotFoundException e) {
             System.out.println("El archivo no existe");

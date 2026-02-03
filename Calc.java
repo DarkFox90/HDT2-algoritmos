@@ -9,5 +9,5 @@ public interface Calc {
     * @param input La expresión a evaluar.
     * @return El resultado entero de la operación.
     */
-    int operate(String input);
+    double operate(String input);
 }
