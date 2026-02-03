@@ -13,18 +13,14 @@ public class Controller {
     
     public void ReadFile() {
         String filePath = "";   
+        ArrayStack<Integer> stack = new ArrayStack<>();
+        PostfixCalculator calculator = new PostfixCalculator(stack);
 
         try(BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
             String line;
-            while((line = reader.readLine()) != null) {
-                for (int i = 0; i < line.length(); i++) {
-                    char c = line.charAt(i);
-                    if (c == ' ') {
-                        continue;
-                    }
-                    
-                    System.out.println(c);
-                } 
+            while((line = reader.readLine()) != null) { 
+                int outcome = calculator.operate(line);
+                System.out.println(outcome); 
             } 
         } catch (FileNotFoundException e) {
             System.out.println("El archivo no existe");
