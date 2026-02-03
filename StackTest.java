@@ -47,6 +47,32 @@ public class StackTest {
         Assert.assertEquals(5, outcome);
         
     }
+
+    @Test
+    public void incorrectOperatorTest() {
+        Stack<Integer> stack2 = new ArrayStack<>();
+        PostfixCalculator calc = new PostfixCalculator(stack2);
+        int outcome = calc.operate("1 3 x");
+        Assert.assertEquals(4, outcome);
+    }
+
+    @Test
+    public void excesiveOperatorsTest() {
+        Stack<Integer> stack2 = new ArrayStack<>();
+        PostfixCalculator calc = new PostfixCalculator(stack2);
+        int outcome = calc.operate("1 3 + -");
+        Assert.assertEquals(4, outcome);
+        
+    }
+
+    @Test
+    public void divisionByZeroTest() {
+        Stack<Integer> stack2 = new ArrayStack<>();
+        PostfixCalculator calc = new PostfixCalculator(stack2);
+        int outcome = calc.operate("1 0 /");
+        Assert.assertEquals(0, outcome);
+        
+    }
 }
     
 
