@@ -11,10 +11,15 @@ import java.io.IOException;
 
 public class Controller {
     
+    private Calc calculator;
+
+    public Controller(Calc calculator) {
+        this.calculator = calculator;
+        ReadFile();
+    }
+    
     public void ReadFile() {
-        String filePath = "";   
-        ArrayStack<Integer> stack = new ArrayStack<>();
-        PostfixCalculator calculator = new PostfixCalculator(stack);
+        String filePath = "datos.txt";   
 
         try(BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
             String line;
