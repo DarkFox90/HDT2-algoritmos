@@ -16,9 +16,9 @@
 * @since 31-01-2026
 */ 
 public class Calculator implements Calc{
-    private Stack<Integer> stack;
+    private Stack<Double> stack;
 
-    public Calculator(Stack<Integer> stack){
+    public Calculator(Stack<Double> stack){
         this.stack = stack;
     }
     @Override
@@ -26,10 +26,10 @@ public class Calculator implements Calc{
         for (String x : input.split(" ")) {
             if (x.isEmpty()) continue;
             if (isNumeric(x)) {
-                stack.push(Integer.parseInt(x));
+                stack.push(Double.parseDouble(x));
             } else {
-                int b = stack.pop();
-                int a = stack.pop();
+                double b = stack.pop();
+                double a = stack.pop();
                 switch (x) {
                     case "+":
                         stack.push(a + b);

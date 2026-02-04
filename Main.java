@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        StackO<Integer> stack = new StackO<>();
+        StackO<Double> stack = new StackO<>();
         //ArrayStack<Integer> stack = new ArrayStack<>();
         Calculator calculator = new Calculator(stack);
 

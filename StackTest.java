@@ -15,62 +15,62 @@ public class StackTest {
 
     @Test
     public void sumTest() {
-        Stack<Integer> stack2 = new StackA<>();
+        Stack<Double> stack2 = new StackA<>();
         Calculator calc = new Calculator(stack2);
         double outcome = calc.operate("1 3 +");
-        Assert.assertEquals(4, outcome);
+        Assert.assertEquals(4, outcome, 0.0001);
     }
 
     @Test
     public void substractionTest() {
-        Stack<Integer> stack2 = new StackA<>();
+        Stack<Double> stack2 = new StackA<>();
         Calculator calc = new Calculator(stack2);
         double outcome = calc.operate("6 2 -");
-        Assert.assertEquals(4, outcome);
+        Assert.assertEquals(4, outcome, 0.0001);
         
     }
     
     @Test
     public void multiplicationTest() {
-        Stack<Integer> stack2 = new StackA<>();
+        Stack<Double> stack2 = new StackA<>();
         Calculator calc = new Calculator(stack2);
         double outcome = calc.operate("6 7 *");
-        Assert.assertEquals(42, outcome);
+        Assert.assertEquals(42, outcome, 0.0001);
         
     }
 
     @Test
     public void divisionTest() {
-        Stack<Integer> stack2 = new StackA<>();
+        Stack<Double> stack2 = new StackA<>();
         Calculator calc = new Calculator(stack2);
         double outcome = calc.operate("50 10 /");
-        Assert.assertEquals(5, outcome);
+        Assert.assertEquals(5, outcome, 0.0001);
         
     }
 
     @Test
     public void incorrectOperatorTest() {
-        Stack<Integer> stack2 = new StackA<>();
+        Stack<Double> stack2 = new StackA<>();
         Calculator calc = new Calculator(stack2);
         double outcome = calc.operate("1 3 x");
-        Assert.assertEquals(4, outcome);
+        Assert.assertEquals(4, outcome, 0.0001);
     }
 
     @Test
     public void excesiveOperatorsTest() {
-        Stack<Integer> stack2 = new StackA<>();
+        Stack<Double> stack2 = new StackA<>();
         Calculator calc = new Calculator(stack2);
         double outcome = calc.operate("1 3 + -");
-        Assert.assertEquals(4, outcome);
+        Assert.assertEquals(4, outcome, 0.0001);
         
     }
 
     @Test
     public void divisionByZeroTest() {
-        Stack<Integer> stack2 = new StackA<>();
+        Stack<Double> stack2 = new StackA<>();
         Calculator calc = new Calculator(stack2);
         double outcome = calc.operate("1 0 /");
-        Assert.assertEquals(0, outcome);
+        Assert.assertEquals(0, outcome, 0.0001);
         
     }
 }
