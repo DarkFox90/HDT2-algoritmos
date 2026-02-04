@@ -15,10 +15,10 @@
 * @version 1.0
 * @since 31-01-2026
 */ 
-public class PostfixCalculator implements Calc{
+public class Calculator implements Calc{
     private Stack<Integer> stack;
 
-    public PostfixCalculator(Stack<Integer> stack){
+    public Calculator(Stack<Integer> stack){
         this.stack = stack;
     }
     @Override

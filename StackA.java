@@ -1,13 +1,13 @@
 /**
-* Implementación de una Pila utilizando la clase Vector de Java.
+* Implementación de una Pila utilizando la clase Arrays de Java.
 * Esta clase es de tamaño variable y soporta genéricos.
 * @author Mauricio Corado 25218 Carlos Pozuelos 25104
 * @param <T> El tipo de datos almacenados en la pila.
 */
 
-import java.util.Vector;
-public class VectorStack<T> implements Stack<T> {
-    Vector<T> list = new Vector<>();
+import java.util.ArrayList;
+public class StackA<T> implements Stack<T> {
+    ArrayList<T> list = new ArrayList<>();
 
     public boolean isEmpty() {
         return list.isEmpty();
